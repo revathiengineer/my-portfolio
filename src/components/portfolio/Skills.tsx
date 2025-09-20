@@ -67,31 +67,13 @@ const Skills: React.FC<SkillsProps> = ({ data }) => {
       <h3 className="text-xl font-semibold mb-6 text-center text-gradient">
         {title}
       </h3>
-      <div className="space-y-4">
-        {skills.map((skill, index) => {
+      <div className="grid grid-cols-2 gap-4">
+        {skills.map((skill) => {
           const IconComponent = iconMap[skill.icon] || Code;
           return (
-            <div key={skill.name} className="space-y-2">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <IconComponent className="w-5 h-5 text-primary" />
-                  <span className="font-medium">{skill.name}</span>
-                </div>
-                <span className="text-sm text-muted-foreground font-semibold">
-                  {skill.level}%
-                </span>
-              </div>
-              <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                <div
-                  className={`skill-bar h-full rounded-full ${
-                    isVisible ? 'animate-[width_1.5s_ease-out_forwards]' : 'w-0'
-                  }`}
-                  style={{
-                    width: isVisible ? `${skill.level}%` : '0%',
-                    animationDelay: `${delay + index * 200}ms`,
-                  }}
-                />
-              </div>
+            <div key={skill.name} className="flex items-center space-x-3 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth">
+              <IconComponent className="w-5 h-5 text-primary flex-shrink-0" />
+              <span className="font-medium text-foreground">{skill.name}</span>
             </div>
           );
         })}
@@ -131,28 +113,6 @@ const Skills: React.FC<SkillsProps> = ({ data }) => {
           />
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { label: 'Years Experience', value: '5+' },
-            { label: 'Projects Completed', value: '50+' },
-            { label: 'Technologies', value: '20+' },
-            { label: 'Happy Clients', value: '30+' },
-          ].map((stat, index) => (
-            <div 
-              key={stat.label} 
-              className={`text-center ${isVisible ? 'fade-in-up' : 'opacity-0'}`}
-              style={{ animationDelay: `${800 + index * 100}ms` }}
-            >
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

@@ -6,8 +6,7 @@ import {
   GraduationCap, 
   Award, 
   Calendar,
-  MapPin,
-  BookOpen
+  MapPin
 } from 'lucide-react';
 import type { PortfolioData } from '@/hooks/usePortfolioData';
 
@@ -182,48 +181,6 @@ const About: React.FC<AboutProps> = ({ data }) => {
                 </div>
               </Card>
             )}
-
-            {/* Values/Interests */}
-            <Card className="card-elegant p-6 fade-in-right" style={{ animationDelay: '200ms' }}>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-gradient">
-                  Interests
-                </h3>
-              </div>
-
-              <div className="space-y-3">
-                {[
-                  'Open Source Contributing',
-                  'Mentoring Developers', 
-                  'Tech Conference Speaking',
-                  'UI/UX Design',
-                  'Performance Optimization',
-                  'Developer Tooling'
-                ].map((interest) => (
-                  <div 
-                    key={interest}
-                    className="flex items-center space-x-2 p-2 rounded hover:bg-muted/50 transition-smooth"
-                  >
-                    <div className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="text-sm text-foreground/80">{interest}</span>
-                  </div>
-                ))}
-              </div>
-            </Card>
-
-            {/* Fun Fact */}
-            <Card className="card-elegant p-6 bg-gradient-to-br from-primary/5 to-primary-glow/5 border-primary/20 fade-in-right" style={{ animationDelay: '400ms' }}>
-              <h3 className="text-lg font-semibold text-gradient mb-3">
-                Fun Fact
-              </h3>
-              <p className="text-sm text-foreground/80 leading-relaxed">
-                I've contributed to over 20 open-source projects and have helped 
-                build applications used by more than 100,000 users worldwide.
-              </p>
-            </Card>
           </div>
         </div>
       </div>

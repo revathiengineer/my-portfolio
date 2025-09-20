@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { useToast } from '@/hooks/use-toast';
 import { 
   Mail, 
   Phone, 
   MapPin, 
-  Send, 
   Github, 
   Linkedin, 
   Twitter,
@@ -22,52 +16,6 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ data }) => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Simulate form submission (replace with actual implementation)
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // For now, create a mailto link as fallback
-      const subject = `Contact from ${formData.name}`;
-      const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-      const mailtoLink = `mailto:${data.email}?subject=${subject}&body=${body}`;
-      
-      window.location.href = mailtoLink;
-      
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon!",
-      });
-      
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const contactMethods = [
     {
@@ -122,77 +70,9 @@ const Contact: React.FC<ContactProps> = ({ data }) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card className="card-elegant p-8 fade-in-left">
-            <h3 className="text-2xl font-semibold mb-6 text-gradient">
-              Send a Message
-            </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="name">Name *</Label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Your full name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="transition-smooth focus:ring-2 focus:ring-primary"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="email">Email *</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="your.email@example.com"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="transition-smooth focus:ring-2 focus:ring-primary"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message">Message *</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell me about your project or just say hello..."
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  className="transition-smooth focus:ring-2 focus:ring-primary resize-none"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                variant="cta"
-                size="lg"
-                disabled={isSubmitting}
-                className="w-full group"
-              >
-                {isSubmitting ? (
-                  'Sending...'
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-smooth" />
-                  </>
-                )}
-              </Button>
-            </form>
-          </Card>
-
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
-          <div className="space-y-8 fade-in-right">
+          <div className="space-y-8 fade-in-up">
             {/* Contact Methods */}
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-gradient">
