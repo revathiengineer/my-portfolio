@@ -47,7 +47,7 @@ const Navigation: React.FC = () => {
               onClick={() => scrollToSection('#hero')}
               className="text-xl font-bold text-gradient hover:opacity-80 transition-smooth"
             >
-              AT
+              Revathi
             </button>
           </div>
 

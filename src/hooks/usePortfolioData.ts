@@ -11,6 +11,8 @@ export interface PortfolioData {
     email: string;
     phone: string;
     avatar: string;
+    favicon: string;
+    ogImage: string;
   };
   social: {
     github: string;

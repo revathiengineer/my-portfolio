@@ -1,164 +1,120 @@
 {
   "personal": {
-    "name": "Alex Thompson",
-    "title": "Full Stack Developer",
-    "subtitle": "Building digital experiences with modern technologies",
-    "bio": "Passionate full-stack developer with 5+ years of experience creating scalable web applications. I love turning ideas into reality through clean code and thoughtful design.",
-    "location": "San Francisco, CA",
-    "email": "alex.thompson@example.com",
-    "phone": "+1 (555) 123-4567",
-    "avatar": "/src/assets/profile-avatar.jpg"
+    "name": "Sankula Revathi",
+    "title": "Software Engineer",
+    "subtitle": "Building scalable microservices and cloud-native applications",
+    "bio": "Software Engineer with 4+ years of experience in developing scalable microservices and cloud-native applications using Java, Spring Boot, and cloud platforms such as AWS and Google Cloud. Skilled in delivering robust CI/CD pipelines, integrating middleware like Kafka, and optimizing backend systems for performance and cost efficiency.",
+    "location": "Dallas, Texas",
+    "email": "sankularevathi4@gmail.com",
+    "phone": "+1-913-762-3079",
+    "avatar": "/src/assets/profile.webp",
+    "favicon": "/src/assets/profile.webp",
+    "ogImage": "/src/assets/profile.webp"
   },
   "social": {
-    "github": "https://github.com/alexthompson",
-    "linkedin": "https://linkedin.com/in/alexthompson",
-    "twitter": "https://twitter.com/alexthompson",
-    "website": "https://alexthompson.dev"
+    "github": null,
+    "linkedin": "https://www.linkedin.com/in/sankula-revathi-a8a476207",
+    "twitter": null,
+    "website": null
   },
   "skills": {
     "frontend": [
-      { "name": "React", "level": 95, "icon": "react" },
-      { "name": "TypeScript", "level": 90, "icon": "code" },
-      { "name": "Next.js", "level": 85, "icon": "zap" },
-      { "name": "Tailwind CSS", "level": 92, "icon": "palette" },
-      { "name": "Vue.js", "level": 75, "icon": "layers" }
+      { "name": "React", "level": 85, "icon": "react" },
+      { "name": "Angular", "level": 80, "icon": "layers" },
+      { "name": "Redux", "level": 80, "icon": "git-branch" },
+      { "name": "Bootstrap", "level": 85, "icon": "palette" },
+      { "name": "Jest", "level": 75, "icon": "check-circle" }
     ],
     "backend": [
-      { "name": "Node.js", "level": 88, "icon": "server" },
-      { "name": "Python", "level": 82, "icon": "code2" },
-      { "name": "PostgreSQL", "level": 85, "icon": "database" },
-      { "name": "MongoDB", "level": 80, "icon": "hard-drive" },
-      { "name": "GraphQL", "level": 75, "icon": "git-branch" }
+      { "name": "Java", "level": 95, "icon": "code" },
+      { "name": "Spring Boot", "level": 92, "icon": "server" },
+      { "name": "Node.js", "level": 85, "icon": "server" },
+      { "name": "Express.js", "level": 80, "icon": "server" },
+      { "name": "Kafka", "level": 80, "icon": "radio" },
+      { "name": "GraphQL", "level": 75, "icon": "git-branch" },
+      { "name": "Python", "level": 70, "icon": "code2" },
+      { "name": "C#", "level": 70, "icon": "code" }
     ],
     "tools": [
-      { "name": "Docker", "level": 85, "icon": "box" },
-      { "name": "AWS", "level": 80, "icon": "cloud" },
       { "name": "Git", "level": 95, "icon": "git-branch" },
-      { "name": "Figma", "level": 70, "icon": "figma" }
+      { "name": "Jenkins", "level": 90, "icon": "settings" },
+      { "name": "Docker", "level": 85, "icon": "box" },
+      { "name": "Kubernetes", "level": 80, "icon": "cloud" },
+      { "name": "AWS", "level": 85, "icon": "cloud" },
+      { "name": "Azure", "level": 80, "icon": "cloud" },
+      { "name": "Google Cloud", "level": 80, "icon": "cloud" },
+      { "name": "PostgreSQL", "level": 85, "icon": "database" },
+      { "name": "MySQL", "level": 80, "icon": "database" },
+      { "name": "MongoDB", "level": 80, "icon": "hard-drive" },
+      { "name": "Oracle", "level": 75, "icon": "database" }
     ]
   },
   "projects": [
     {
       "id": "1",
-      "name": "E-Commerce Platform",
-      "description": "A modern, full-stack e-commerce solution with real-time inventory management, payment processing, and advanced analytics.",
+      "name": "Just Grab - Food Delivery Application",
+      "description": "Food delivery app built using MERN stack with features like menu browsing, order placement, and real-time delivery tracking.",
       "image": "/placeholder.svg",
-      "techStack": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      "liveUrl": "https://example-ecommerce.com",
-      "githubUrl": "https://github.com/alexthompson/ecommerce-platform",
-      "featured": true,
-      "status": "Completed"
-    },
-    {
-      "id": "2",
-      "name": "Task Management App",
-      "description": "Collaborative task management tool with real-time updates, team workspaces, and project tracking capabilities.",
-      "image": "/placeholder.svg",
-      "techStack": ["Vue.js", "Express", "MongoDB", "Socket.io"],
-      "liveUrl": "https://taskmaster-app.com",
-      "githubUrl": "https://github.com/alexthompson/task-management",
-      "featured": true,
-      "status": "Completed"
-    },
-    {
-      "id": "3",
-      "name": "Weather Dashboard",
-      "description": "Beautiful weather application with location-based forecasts, interactive maps, and weather alerts.",
-      "image": "/placeholder.svg",
-      "techStack": ["React", "TypeScript", "Chart.js", "OpenWeather API"],
-      "liveUrl": "https://weather-dashboard-demo.com",
-      "githubUrl": "https://github.com/alexthompson/weather-dashboard",
-      "featured": false,
-      "status": "Completed"
-    },
-    {
-      "id": "4",
-      "name": "AI Content Generator",
-      "description": "AI-powered content generation tool for marketers and content creators with multiple templates and export options.",
-      "image": "/placeholder.svg",
-      "techStack": ["Next.js", "OpenAI API", "Prisma", "Supabase"],
+      "techStack": ["MongoDB", "Express.js", "React.js", "Node.js"],
       "liveUrl": null,
-      "githubUrl": "https://github.com/alexthompson/ai-content-generator",
+      "githubUrl": null,
       "featured": true,
-      "status": "In Development"
+      "status": "Completed"
     }
   ],
   "experience": [
     {
       "id": "1",
-      "position": "Senior Full Stack Developer",
-      "company": "TechCorp Inc.",
-      "location": "San Francisco, CA",
-      "startDate": "2022-01",
+      "position": "Java Developer",
+      "company": "Extarc Software Solution",
+      "location": "Dallas, Texas",
+      "startDate": "2023-10",
       "endDate": null,
       "current": true,
-      "description": "Lead development of scalable web applications serving 100K+ users. Architected microservices infrastructure and mentored junior developers.",
+      "description": "Developed and deployed scalable microservices using Java and Spring Boot on GCP, integrating REST APIs, Kafka, and GraphQL.",
       "achievements": [
-        "Improved application performance by 40% through code optimization",
-        "Led migration to microservices architecture",
-        "Mentored 5 junior developers and conducted technical interviews",
-        "Implemented CI/CD pipelines reducing deployment time by 60%"
+        "Implemented CI/CD pipelines with Jenkins, Cloud Build, and GitHub Actions",
+        "Designed cloud-native solutions with serverless workflows and optimized databases",
+        "Built responsive UIs using React and Angular"
       ],
-      "technologies": ["React", "Node.js", "AWS", "Docker", "PostgreSQL"]
+      "technologies": ["Java", "Spring Boot", "GCP", "Kafka", "GraphQL", "React", "Angular"]
     },
     {
       "id": "2",
-      "position": "Full Stack Developer",
-      "company": "StartupXYZ",
-      "location": "Remote",
-      "startDate": "2020-06",
-      "endDate": "2021-12",
+      "position": "Software Engineer",
+      "company": "Wipro",
+      "location": "India",
+      "startDate": "2021-01",
+      "endDate": "2023-06",
       "current": false,
-      "description": "Built MVP from scratch and scaled to 10K users. Developed both frontend and backend systems with modern tech stack.",
+      "description": "Engineered and deployed cloud-native inventory management systems on Azure with Java and Spring Boot.",
       "achievements": [
-        "Built entire application from conception to production",
-        "Implemented real-time features using WebSocket connections",
-        "Designed and developed RESTful APIs",
-        "Achieved 99.9% uptime in production environment"
+        "Achieved 99.9% uptime with serverless architectures",
+        "Automated CI/CD with Jenkins, Azure DevOps, GitHub Actions",
+        "Developed predictive maintenance tools and migrated legacy systems using Azure Functions"
       ],
-      "technologies": ["Vue.js", "Express", "MongoDB", "Redis", "Digital Ocean"]
-    },
-    {
-      "id": "3",
-      "position": "Frontend Developer",
-      "company": "Digital Agency Pro",
-      "location": "New York, NY",
-      "startDate": "2019-01",
-      "endDate": "2020-05",
-      "current": false,
-      "description": "Developed responsive web applications for diverse clients ranging from startups to Fortune 500 companies.",
-      "achievements": [
-        "Delivered 15+ client projects on time and within budget",
-        "Improved website loading speeds by 50% through optimization",
-        "Created reusable component library used across projects",
-        "Collaborated with design team to implement pixel-perfect UIs"
-      ],
-      "technologies": ["React", "JavaScript", "SASS", "Webpack", "Git"]
+      "technologies": ["Java", "Spring Boot", "Azure", "Jenkins", "Kafka", "Azure Functions"]
     }
   ],
   "education": [
     {
-      "degree": "Bachelor of Science in Computer Science",
-      "school": "University of California, Berkeley",
-      "location": "Berkeley, CA",
-      "startDate": "2015-09",
-      "endDate": "2019-05",
-      "gpa": "3.8",
-      "honors": ["Magna Cum Laude", "Dean's List"]
-    }
-  ],
-  "certifications": [
-    {
-      "name": "AWS Certified Developer",
-      "issuer": "Amazon Web Services",
-      "date": "2023-03",
-      "credentialId": "AWS-DEV-2023-001"
+      "degree": "Masters in Computer Science",
+      "school": "University of Central Missouri",
+      "location": "Missouri, USA",
+      "startDate": "2023-08",
+      "endDate": "2024-05",
+      "gpa": "3.63",
+      "honors": []
     },
     {
-      "name": "Google Cloud Professional Developer",
-      "issuer": "Google Cloud",
-      "date": "2022-11",
-      "credentialId": "GCP-PRO-2022-456"
+      "degree": "Bachelor of Technology in Computer Science and Engineering",
+      "school": "Vignan's Lara Institute of Technology",
+      "location": "India",
+      "startDate": "2019-08",
+      "endDate": "2023-05",
+      "gpa": "7.86/10.00",
+      "honors": []
     }
-  ]
+  ],
+  "certifications": []
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 import type { PortfolioData } from '@/hooks/usePortfolioData';
-import profileAvatar from '@/assets/profile-avatar.jpg';
+import profileAvatar from '@/assets/profile.webp';
 
 interface HeroProps {
   data: PortfolioData['personal'] & { social: PortfolioData['social'] };
